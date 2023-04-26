@@ -24,6 +24,13 @@ public class UserService {
         return repository.save (empleado);
 
     }
+
+    public Empleado guardarUserid(Empleado empleado){
+
+        return repository.save (empleado);
+
+    }
+
     public List<Empleado> buscarTdoso(){
 
         return (List<Empleado>) repository.findAll();

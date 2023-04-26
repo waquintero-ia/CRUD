@@ -35,8 +35,15 @@ public class UserController {
     }
 
     // update employee rest api
+    @PutMapping("/user/{id}")
+    public ResponseEntity<?> updateEmployee(@PathVariable Long id, @RequestBody Empleado empleado){
+        //String msj = service.guardarUser(empleado);
 
-
+        empleado.setUser(String.valueOf(empleado));
+        empleado.setPassword(String.valueOf(empleado));
+        empleado.setEmail(String.valueOf(empleado));
+        return ResponseEntity.ok(service.finByUser(empleado));
+    }
 
     // delete employee rest api
     @DeleteMapping("/user/{id}")
